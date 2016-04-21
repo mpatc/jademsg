@@ -2,11 +2,11 @@
 $(document).ready(function() {
   $("div").on("mouseover", ".card", function() {
         // console.log( $( this ).text() );
-        $(this).removeClass('animated tada bounceInLeft over')
-        $(this).addClass('animated tada over')
+        $(this).removeClass('animated tada bounceInLeft')
+        $(this).addClass('animated tada')
     });
     $("div").on("animationend", ".card", function(e) {
-        $(this).removeClass('jello bounceInLeft tada over')
+        $(this).removeClass('rotateInDownLeft tada animated')
       })
   $("#namer").on("click", checker)
 });
