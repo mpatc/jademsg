@@ -1,5 +1,13 @@
 
 $(document).ready(function() {
+  $("div").on("mouseover", ".card", function() {
+        // console.log( $( this ).text() );
+        $(this).removeClass('animated tada bounceInLeft over')
+        $(this).addClass('animated tada over')
+    });
+    $("div").on("animationend", ".card", function(e) {
+        $(this).removeClass('jello bounceInLeft tada')
+      })
   $("#namer").on("click", checker)
 });
 function checker() {

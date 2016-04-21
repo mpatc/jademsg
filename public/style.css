@@ -7,14 +7,14 @@ box-shadow: 10px 10px 5px #888888;
 display: inline-block;
 }
 .over {
-  background-color: skyblue;
+  background-color: gold;
   color: white;
-  outline: 6px dashed yellow;
-  box-shadow: 0 0 0 6px #EA3556;
+  outline: 6px dashed black;
+  box-shadow: 0 0 0 6px #grey;
 
 }
 .over1 {
-  background-color: skyblue;
+  background-color: goldenrod;
   color: black
 }
 
