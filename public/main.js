@@ -6,7 +6,7 @@ $(document).ready(function() {
         $(this).addClass('animated tada over')
     });
     $("div").on("animationend", ".card", function(e) {
-        $(this).removeClass('jello bounceInLeft tada')
+        $(this).removeClass('jello bounceInLeft tada over')
       })
   $("#namer").on("click", checker)
 });
