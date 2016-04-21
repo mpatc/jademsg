@@ -19,6 +19,7 @@ function checker() {
 $.get(`/msgg/${user}/${messageURL}/${dateURL}`, function (data, status) {
 console.log(data)
   $("#msg1").append(data)
+  $('.person').addClass('animated rotateInDownLeft')
 
 })
 
