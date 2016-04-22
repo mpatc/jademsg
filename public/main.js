@@ -1,26 +1,29 @@
 
 $(document).ready(function() {
+  $.get(`/api/message/`)
   $("div").on("mouseover", ".card", function() {
         // console.log( $( this ).text() );
-        $(this).removeClass('animated tada bounceInLeft')
+        $(this).removeClass('animated tada zoomInDown')
         $(this).addClass('animated tada')
     });
     $("div").on("animationend", ".card", function(e) {
-        $(this).removeClass('rotateInDownLeft tada animated')
+        $(this).removeClass('zoomInDown tada animated')
       })
-  $("#namer").on("click", checker)
+  $("#namer").on("click", adder)
 });
-function checker() {
+function adder() {
+
   var user = $("#name").val();
   var message = $("#msg").val();
   var messageURL = encodeURIComponent(message)
   var date = new Date()
   var dateURL = encodeURIComponent(date)
-$.get(`/msgg/${user}/${messageURL}/${dateURL}`, function (data, status) {
-console.log(data)
-  $("#msg1").append(data)
-  $('.person').addClass('animated rotateInDownLeft')
 
-})
+$.post(`/api/message/${user}/${messageURL}/${dateURL}/`, function (data, status) {
+console.log ("data", data)
 
-}
+
+ $('.person').last().addClass('animated zoomInDown card')
+ }) }
+//
+// })
